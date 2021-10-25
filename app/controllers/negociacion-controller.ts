@@ -15,8 +15,11 @@ export class NegociacionController {
 
     agrega() : void {
         const negociacion = this.crearNegociacion();
+        negociacion.fecha.setDate(15);
+        
         this.negociaciones.agrega(negociacion);
         const negociaciones = this.negociaciones.lista();
+        
         console.log(negociaciones);
         this.limpiaFormulario();
     }
